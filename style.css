@@ -1,0 +1,296 @@
+/*! base start */
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0 25px;
+  line-height: 40px;
+  font-weight: 500;
+  border: 1px solid #000;
+  transition: 0.3s ease all;
+}
+.btn-sm {
+  line-height: 33px;
+}
+
+.btn-lg {
+  line-height: 45px;
+}
+.btn-primary {
+  background-color: #1367ef;
+  color: #fff;
+  border-color: #1367ef;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #1367ef;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  outline: none;
+  border: 1px solid #dee0ea;
+  padding: 8px 8px 8px 15px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: gray;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+/*! base and */
+
+/* ! header start */
+header {
+  border-bottom: 1px solid #dee0ea;
+  position: relative;
+}
+.global-notification {
+  background-color: #1367ef;
+  padding: 14px 0px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+}
+.global-notification a {
+  color: white;
+  font-weight: 600;
+}
+
+.header-row {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heder-center .navigation .menu-list {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.heder-center .menu-list .menu-list-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 90px;
+}
+.heder-center .menu-list .menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.heder-center .menu-list .menu-link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #1367ef;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: 0.2s ease width;
+}
+
+.heder-center .menu-list .menu-list-item:hover .menu-link::after {
+  width: 100%;
+}
+
+.heder-center .menu-list .menu-link.active::after {
+  width: 100%;
+}
+.heder-center .menu-list i {
+  font-size: 12px;
+}
+
+.header-right .header-right-links {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.header-right .bi-person {
+  font-size: 23px;
+}
+.header-right .toggle-button {
+  border: none;
+  background-color: transparent;
+}
+.header-right i {
+  font-size: 18px;
+}
+
+.header-right .header-cart {
+  position: relative;
+  top: 0;
+}
+.header-right .header-cart-link .header-cart-count {
+  width: 16px;
+  height: 16px;
+  background-color: #1367ef;
+  color: white;
+  font-size: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: -12px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/*? menu dropdown  start*/
+header .menu-dropdown-wrapper {
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  opacity: 0;
+  visibility: hidden;
+}
+header .menu-dropdown-content {
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #dee0ea;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+}
+
+header .menu-dropdown-content a {
+  display: flex;
+  padding: 4px 30px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+header .menu-dropdown-content a:hover {
+  color: #1367ef;
+}
+
+.heder-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* mega menu */
+
+.menu-dropdown-megamenu {
+  background-color: white;
+  border: 1px solid #dee0ea;
+  padding: 22px;
+  display: flex;
+  column-gap: 50px;
+}
+
+.megamenu-wrapper .menu-dropdown-wrapper {
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.megamenu-wrapper {
+  position: static !important;
+}
+
+.megamenu-wrapper .mega-menu-links {
+  display: flex;
+  column-gap: 50px;
+}
+
+.megamenu-wrapper .mega-menu-product-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.megamenu-wrapper .megamenu-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.megamenu-wrapper .megamenu-menu-list a {
+  font-size: 14px;
+}
+
+.megamenu-wrapper .megamenu-single {
+  font-size: 14px;
+}
+
+.megamenu-wrapper .megamenu-single-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.megamenu-wrapper .megamenu-single-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.megamenu-wrapper .megamenu-single-button {
+  margin-top: 5px;
+}
+
+/*? menu dropdown  and*/
+
+/* ! header end */
