@@ -9,3 +9,7 @@
 
 @import url(companents/modal-search.css);
 @import url(companents/slider.css);
+@import url(companents/category-item.css);
+
+/*! pages */
+@import url(pages/home.css);

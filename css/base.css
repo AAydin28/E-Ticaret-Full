@@ -9,6 +9,10 @@
   font-family: "Jost", sans-serif;
 }
 
+body {
+  overflow-x: hidden; /* Bir elementin içeriği, belirlenen genişliği (width) aştığında taşma (overflow) yapar. Bu durumda overflow-x özelliği, yatay taşmayı nasıl yöneteceğinizi belirler.*/
+}
+
 ul,
 ol {
   margin: 0;
