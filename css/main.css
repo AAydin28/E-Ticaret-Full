@@ -10,6 +10,10 @@
 @import url(companents/modal-search.css);
 @import url(companents/slider.css);
 @import url(companents/category-item.css);
+@import url(companents/product-item.css);
+@import url(companents/campaign-item.css);
+@import url(companents/blog-item.css);
+@import url(companents/campaign-sinle.css);
 
 /*! pages */
 @import url(pages/home.css);
