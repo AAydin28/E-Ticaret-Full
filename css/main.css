@@ -15,9 +15,13 @@
 @import url(companents/campaign-item.css);
 @import url(companents/blog-item.css);
 @import url(companents/campaign-sinle.css);
+@import url(companents/single-product/breadcrumb.css);
+@import url(companents/single-product/product-gallery.css);
+@import url(companents/single-product/product-info.css);
 
 /*! pages */
 @import url(pages/home.css);
 @import url(pages/contact.css);
 @import url(pages/account.css);
 @import url(pages/cart.css);
+@import url(pages/single-product.css);
