@@ -204,7 +204,7 @@
     <section class="slider">
       <!-- Slider İçeriği -->
       <div class="slide-elements">
-        <div class="slider-item">
+        <div class="slider-item fade">
           <div class="slider-image">
             <img
               class="img-fluid"
@@ -218,7 +218,7 @@
             <a href="#" class="btn btn-lg btn-primary">Explore Now</a>
           </div>
         </div>
-        <div class="slider-item">
+        <div class="slider-item fade">
           <div class="slider-image">
             <img
               class="img-fluid"
@@ -232,7 +232,7 @@
             <a href="#" class="btn btn-lg btn-primary">Explore Now</a>
           </div>
         </div>
-        <div class="slider-item">
+        <div class="slider-item fade">
           <div class="slider-image">
             <img
               class="img-fluid"
@@ -248,17 +248,23 @@
         </div>
       </div>
       <div class="slider-buttons">
-        <button class="slider-prev">
+        <button onclick="plusSlide(-1)" class="slider-prev">
           <i class="bi bi-chevron-left"></i>
         </button>
-        <button class="slider-next">
+        <button onclick="plusSlide(1)" class="slider-next">
           <i class="bi bi-chevron-right"></i>
         </button>
       </div>
       <div class="slider-dots">
-        <button class="slider-dot"><span></span></button>
-        <button class="slider-dot"><span></span></button>
-        <button class="slider-dot"><span></span></button>
+        <button class="slider-dot active" onclick="currentSlide(1)">
+          <span></span>
+        </button>
+        <button class="slider-dot" onclick="currentSlide(2)">
+          <span></span>
+        </button>
+        <button class="slider-dot" onclick="currentSlide(3)">
+          <span></span>
+        </button>
       </div>
     </section>
     <!--! slider end   -->

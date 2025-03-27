@@ -55,13 +55,45 @@ btnCloseSearch.addEventListener("click", ()=> {
 
 //! slider start 
 
- const slides = document.getElementsByClassName("slider-item");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-//  for (let index = 0; index < slides.length; index++) {
-//     const element = array[index]   
-//  }
+setInterval(()=>{
+    showSlides(slideIndex += 1)
+}, 4000);
 
-slides.forEach(element => {
-    
-});
+function plusSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+    showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slider-item");
+    const dots = document.getElementsByClassName("slider-dot");
+
+    // Eğer slideIndex, sınırların dışına çıkarsa döngüyle başa/sona sar
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    // Tüm slaytları gizle
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Geçerli slaytı göster
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex -1].className += " active";
+}
+
 //! slider end
