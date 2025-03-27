@@ -50,6 +50,18 @@ btnCloseSearch.addEventListener("click", ()=> {
     }
  });
  //? click outside end 
-
 //? search modal end
 
+
+//! slider start 
+
+ const slides = document.getElementsByClassName("slider-item");
+
+//  for (let index = 0; index < slides.length; index++) {
+//     const element = array[index]   
+//  }
+
+slides.forEach(element => {
+    
+});
+//! slider end
