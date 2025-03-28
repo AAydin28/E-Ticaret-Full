@@ -1,4 +1,5 @@
-//*  home sidebar start 
+function sidebarFunc() {
+    //*  home sidebar start 
  const btnOpenSidebar = document.getElementById("btn-menu");
  const sidebar = document.getElementById("sidebar");
  const btnCloseSidebar = document.getElementById("close-sidebar")
@@ -21,7 +22,10 @@
  //! click outside end
 //*  home sidebar end
 
+}
 
+function searchModalFunc(){
+    
 //? search modal start
 
 const btnOpenSearch = document.getElementById("search-button");
@@ -51,49 +55,11 @@ btnCloseSearch.addEventListener("click", ()=> {
  });
  //? click outside end 
 //? search modal end
-
-
-//! slider start 
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-setInterval(()=>{
-    showSlides(slideIndex += 1)
-}, 4000);
-
-function plusSlide(n) {
-    showSlides(slideIndex += n);
 }
 
-function currentSlide(n){
-    showSlides((slideIndex = n));
+ function headerFunc(){
+   sidebarFunc();
+   searchModalFunc();
 }
 
-function showSlides(n) {
-    const slides = document.getElementsByClassName("slider-item");
-    const dots = document.getElementsByClassName("slider-dot");
-
-    // Eğer slideIndex, sınırların dışına çıkarsa döngüyle başa/sona sar
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-
-    // Tüm slaytları gizle
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    // Geçerli slaytı göster
-    slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex -1].className += " active";
-}
-
-//! slider end
+export default headerFunc();
