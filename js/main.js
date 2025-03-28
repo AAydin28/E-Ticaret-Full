@@ -1,6 +1,6 @@
 
 import headerFunc from "./header.js";
-import productFunc from "./produts.js";
+import productFunc from "./products.js";
 
 
 //* add product to lacalstorage 
@@ -12,5 +12,5 @@ import productFunc from "./produts.js";
 }
 
 getData();
-
+productFunc();
 const products = localStorage.getItem("products");
