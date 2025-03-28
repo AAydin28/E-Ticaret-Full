@@ -45,8 +45,12 @@ function productsFunc() {
   });
 
   // Ürünleri her iki listeye de ekle
-  productsContainer1.insertAdjacentHTML('beforeend', results);
-  productsContainer2.insertAdjacentHTML('beforeend', results);
+  productsContainer1.innerHTML= results;
+  productsContainer2.innerHTML= results;
+
+  // productsContainer1.insertAdjacentHTML('beforeend', results);
+  // productsContainer2.insertAdjacentHTML('beforeend', results);
+
 
   // Glide.js carousel'larını başlat
   product1();  // İlk carousel
