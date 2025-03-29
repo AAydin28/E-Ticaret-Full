@@ -1,10 +1,38 @@
 import { product1, product2 } from "./glide.js";
 
+let products = localStorage.getItem("products")
+? JSON.parse(localStorage.getItem("products"))
+: [];
+
+let cart =  localStorage.getItem("cart")
+? JSON.parse(localStorage.getItem("cart"))
+: [];
+
+
+
+function addToCart(){
+  const cartItems = document.querySelector(".header-cart-count");
+  const buttons =[ ...document.querySelectorAll(".add-to-cart")];
+  buttons.forEach((button) => {
+    const inCart = cart.find((item) => item.id == Number(button.dataset.id));
+    if(inCart){
+    button.setAttribute("disabled", "disabled");
+    }else{
+      button.addEventListener("click", function(e){
+        e.preventDefault();
+        const id = e.target.dataset.id;
+        const findProduct = products.find((product)=> product.id === Number(id));
+        cart.push({...findProduct, quantity: 1});
+        localStorage.setItem("cart", JSON.stringify(cart));
+        button.setAttribute("disabled", "disabled");
+        cartItems.innerHTML = cart.length;
+       });
+    }
+  });
+}
+
 function productsFunc() {
-  const products = localStorage.getItem("products")
-    ? JSON.parse(localStorage.getItem("products"))
-    : [];
-  
+   
   // Her iki carousel için container'ları ayırıyoruz
   const productsContainer1 = document.getElementById("product-list1");
   const productsContainer2 = document.getElementById("product-list2");
@@ -34,7 +62,7 @@ function productsFunc() {
           </div>
           <span class="product-discount">-${item.discount}%</span>
           <div class="product-links">
-            <button><i class="bi bi-basket-fill"></i></button>
+           <button class="add-to-cart" data-id="${item.id}"><i class="bi bi-basket-fill"></i></button>
             <button><i class="bi bi-heart-fill"></i></button>
             <a href="#"><i class="bi bi-eye-fill"></i></a>
             <a href="#"><i class="bi bi-share-fill"></i></a>
@@ -42,19 +70,22 @@ function productsFunc() {
         </div>
       </li>
     `;
+  
   });
 
-  // Ürünleri her iki listeye de ekle
-  productsContainer1.innerHTML= results;
-  productsContainer2.innerHTML= results;
 
+ productsContainer1 ? productsContainer1.innerHTML= results : "";
+ productsContainer2 ? productsContainer2.innerHTML= results : "";
+
+  // Ürünleri her iki listeye de ekle
   // productsContainer1.insertAdjacentHTML('beforeend', results);
   // productsContainer2.insertAdjacentHTML('beforeend', results);
-
-
   // Glide.js carousel'larını başlat
   product1();  // İlk carousel
   product2();  // İkinci carousel
+
+  // Butonlar yüklendikten sonra `addToCart()` çağrılmalı
+  addToCart();
 }
 
 // productsFunc fonksiyonunu dışa aktar

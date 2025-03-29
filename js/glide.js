@@ -1,3 +1,5 @@
+const productsContainer1 = document.getElementById("product-list1");
+const productsContainer2 = document.getElementById("product-list2");
 
 export function product1(){
     const config = {
@@ -5,6 +7,7 @@ export function product1(){
         perView: 4,
         gap: 20,
         autoplay:3000,
+        bound: true,
         breakpoints: {
             992:{
                 perView: 3,
@@ -18,7 +21,7 @@ export function product1(){
         }
     }
     
-    new Glide('.product-carousel', config).mount();
+    const productsContainer1 = document.getElementById("product-list1")  && new Glide('.product-carousel', config).mount();
 
 }
 export function product2() {
@@ -41,5 +44,7 @@ export function product2() {
     }
 
     // Second carousel initialization
-    new Glide('.product-carousel2', config2).mount();
+
+    const productsContainer2 = document.getElementById("product-list2") && new Glide('.product-carousel2', config2).mount();
+
 }
