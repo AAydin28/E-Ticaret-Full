@@ -56,13 +56,7 @@ export function product2() {
         perView: 5,
         breakpoints: {
             992: {
-                perView: 5,
-            },
-            768: {
-                perView: 2,
-            },
-            576: {
-                perView: 1,
+                perView: 4,
             },
         }
     }
