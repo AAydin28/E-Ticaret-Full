@@ -48,3 +48,32 @@ export function product2() {
     const productsContainer2 = document.getElementById("product-list2") && new Glide('.product-carousel2', config2).mount();
 
 }
+
+
+
+ export function singleThums(){
+    const config3 = {
+        perView: 5,
+        breakpoints: {
+            992: {
+                perView: 5,
+            },
+            768: {
+                perView: 2,
+            },
+            576: {
+                perView: 1,
+            },
+        }
+    }
+
+    // Second carousel initialization
+
+   new Glide('.product-thumb', config3).mount();
+ }
+
+
+
+
+
+
