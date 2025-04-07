@@ -32,16 +32,16 @@
         <div class="container">
           <div class="header-wrapper">
             <div class="header-mobile">
-              <i class="bi bi-list"></i>
+              <i class="bi bi-list" id="btn-menu"></i>
             </div>
             <div class="heder-left">
-              <a href="#" class="logo">LOGO</a>
+              <a href="index.html" class="logo">LOGO</a>
             </div>
-            <div class="heder-center">
+            <div class="heder-center" id="sidebar">
               <nav class="navigation">
                 <ul class="menu-list">
                   <li class="menu-list-item">
-                    <a href="index.html" class="menu-link"
+                    <a href="index.html" class="menu-link "
                       >Home <i class="bi bi-chevron-down"></i
                     ></a>
                     <div class="menu-dropdown-wrapper">
@@ -128,11 +128,11 @@
                   </li>
                 </ul>
               </nav>
-              <i class="bi-x-circle"> </i>
+              <i class="bi-x-circle" id="close-sidebar"> </i>
             </div>
             <div class="header-right">
               <div class="header-right-links">
-                <a href="#" class="heder-account">
+                <a href="account.html" class="heder-account">
                   <i class="bi bi-person"></i>
                 </a>
                 <button class="search-button" id="search-button">
@@ -155,8 +155,8 @@
     </header>
     <!--!  header -and -->
 
-    <!-- ? modal search strat -->
-    <div class="modal-search">
+     <!-- ? modal search strat -->
+     <div class="modal-search" id="modal-search">
       <div class="modal-wrapper">
         <h3 class="modal-title">Search for products</h3>
         <p class="modal-text">
@@ -200,10 +200,41 @@
             </a>
           </div>
         </div>
-        <i class="bi bi-x-circle"></i>
+        <i class="bi bi-x-circle" id="close-search"></i>
       </div>
     </div>
     <!-- ? modal search and -->
+
+  <!--! modal dialog start  -->
+   <div class="modal-dialog">
+    <div class="modal-content">
+      <button class="modal-close">
+        <i class="bi bi-x"></i>
+      </button>
+      <div class="modal-image">
+        <img src="img/modal-dialog.jpg" alt="">
+      </div>
+      <div class="popup-wrapper">
+        <div class="popup-content">
+          <div class="popup-title">
+            <h3>NEWSLETTER</h3>
+          </div>
+          <p class="popup-text">
+            Sign up to our newsletter and get exclusive deals you won find any where else straight to your inbox!
+          </p>
+          <form class="popup-form">
+            <input type="text" placeholder="Enter Email Address Here">
+            <button class="btn btn-primary">SUBSCRIBE</button>
+            <label>
+              <input type="checkbox">
+              <span>Don't show this popup again</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--! modal dialog end  -->
 
     <!--? category start  -->
     <section class="Categories">
@@ -278,8 +309,8 @@
     </section>
     <!--? category end  -->
 
-     <!--! prodocts start  -->
-     <section class="products">
+    <!--! prodocts start  -->
+    <section class="products">
       <div class="container">
         <div class="section-title">
           <h2>Featured Products</h2>
@@ -318,29 +349,29 @@
     </section>
     <!--? campaign single end -->
 
-      <!--! prodocts start  -->
-      <section class="products">
-        <div class="container">
-          <div class="section-title">
-            <h2>New Arrivals</h2>
-            <p>Summer Collection New Morden Design</p>
+    <!--! prodocts start  -->
+    <section class="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>New Arrivals</h2>
+          <p>Summer Collection New Morden Design</p>
+        </div>
+        <div class="product-wrapper product-carousel2">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="product-list glide__slides" id="product-list2"></ul>
           </div>
-          <div class="product-wrapper product-carousel2">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="product-list glide__slides" id="product-list2"></ul>
-            </div>
-            <div class="glide__arrows" data-glide-el="controls">
-              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                <i class="bi bi-chevron-right"></i>
-              </button>
-            </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              <i class="bi bi-chevron-right"></i>
+            </button>
           </div>
         </div>
-      </section>
-      <!--! prodocts end  -->
+      </div>
+    </section>
+    <!--! prodocts end  -->
 
     <!--! POLİCY START  -->
     <section class="policy">
