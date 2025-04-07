@@ -20,6 +20,7 @@
 @import url(companents/single-product/product-info.css);
 @import url(companents/single-product/product-tabs.css);
 @import url(companents/reviews.css);
+@import url(companents/modal-dialog.css);
 
 /*! pages */
 @import url(pages/home.css);
