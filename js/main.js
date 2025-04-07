@@ -1,5 +1,6 @@
 import headerFunc from "./header.js";
 import productFunc from "./products.js";
+import searchFunc from "./search.js";
 
 
 //* add product to lacalstorage  start
@@ -9,6 +10,7 @@ import productFunc from "./products.js";
    const data = await photos.json();
    data ? localStorage.setItem("products",JSON.stringify(data)) : [];
    productFunc();
+   searchFunc(data);
 })();
 
 //* add product to lacalstorage  end
